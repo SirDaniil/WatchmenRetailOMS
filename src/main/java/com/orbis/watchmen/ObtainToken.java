@@ -12,7 +12,6 @@ import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.*;
 import com.nimbusds.jwt.*;
 import com.owlike.genson.*;
-import com.owlike.genson.ext.jaxb.*;
 
 /**
  * User: Daniil Sosonkin

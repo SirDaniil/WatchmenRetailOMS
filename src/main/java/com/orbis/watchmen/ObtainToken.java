@@ -49,6 +49,15 @@ public class ObtainToken
 
         public void setHostname(String hostname)
             {
+                if (hostname == null || (hostname = hostname.trim()).length() == 0)
+                    throw new IllegalArgumentException("Missing hostname");
+
+                if (hostname.charAt(hostname.length() - 1) == '/')
+                    hostname = hostname.substring(0, hostname.length() - 1);
+
+                if (!hostname.startsWith("http://") && !hostname.startsWith("https://"))
+                    hostname = "https://" + hostname;
+
                 this.hostname = hostname;
             }
 
